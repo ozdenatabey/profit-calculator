@@ -1,7 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
 body {
   margin: 0;
   min-height: 100vh;
   background:
     -webkit-radial-gradient(50% 5%, #097200, black);
+  background-attachment: fixed;  
+  color: #FFF67E;
+  font-family: Mukta, sans-serif;
+}
 
+#header {
+  text-align: center;
+  margin: 3% 3%;
+}
+
+#header img {
+  max-width: 10%;
+  max-height: 5%;
+  background-color: transparent;
+  filter: drop-shadow(5px 5px 10px black);
+}
+
+#header h1 {
+  font-size: 2vw;
+  text-shadow: 5px 5px 10px black;
+  margin: 1% 2%;
 }
