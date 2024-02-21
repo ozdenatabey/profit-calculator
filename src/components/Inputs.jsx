@@ -1,19 +1,4 @@
-import { useState } from "react";
-
-export default function Inputs() {
-  const [userInput, setUserInput] = useState({
-    entryPrice: 1000,
-    goal: 2,
-    duration: 30,
-  });
-  function handleChange(inputIdentifier, newValue) {
-    setUserInput((prevUserInput) => {
-      return {
-        ...prevUserInput,
-        [inputIdentifier]: newValue,
-      };
-    });
-  }
+export default function Inputs({ onChange, userInput }) {
   return (
     <div className="input-group" id="input-container">
       <form>
@@ -24,7 +9,7 @@ export default function Inputs() {
           type="number"
           required
           value={userInput.entryPrice}
-          onChange={(event) => handleChange("entryPrice", event.target.value)}
+          onChange={(event) => onChange("entryPrice", event.target.value)}
         />
       </form>
       <form>
@@ -35,7 +20,7 @@ export default function Inputs() {
           type="number"
           required
           value={userInput.goal}
-          onChange={(event) => handleChange("goal", event.target.value)}
+          onChange={(event) => onChange("goal", event.target.value)}
         />
       </form>
       <form>
@@ -46,7 +31,7 @@ export default function Inputs() {
           type="number"
           required
           value={userInput.duration}
-          onChange={(event) => handleChange("duration", event.target.value)}
+          onChange={(event) => onChange("duration", event.target.value)}
         />
       </form>
     </div>
