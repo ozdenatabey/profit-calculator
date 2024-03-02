@@ -60,3 +60,22 @@ input {
   font-weight: bold;
   max-width: 20vh;
 }
+
+#result {
+  margin: auto;
+  padding: 1rem;
+  table-layout: fixed;
+  border-spacing: 1rem;
+  text-align: right;
+}
+
+#result thead {
+  font-size: 1.5rem;
+  color: #FFF67E;
+  text-shadow: 2px 2px 5px black;
+}
+
+#result tbody {
+  font-size: 1rem;
+  color: #fff9a5;
+}
